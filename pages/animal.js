@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { useEffect, useState } from "react"
 import { Line, Bar } from "react-chartjs-2";
 
-const dashboard = () => {
+const Animal = () => {
     const [chartData, setChartData] = useState({})
     const [pieChartData, setPieChartData] = useState({})
 
@@ -197,7 +197,7 @@ const dashboard = () => {
     )
 }
 
-export default dashboard
+export default Animal
 
 export const BarChart = ({ chartData }) => {
     return (

@@ -4,7 +4,7 @@ import Sidebar from './components/Sidebar'
 import { useEffect, useState } from "react"
 import { Line, Bar } from "react-chartjs-2";
 
-const dashboard = () => {
+const Dashboard = () => {
     const [chartData, setChartData] = useState({})
     const [pieChartData, setPieChartData] = useState({})
 
@@ -156,7 +156,7 @@ const dashboard = () => {
     )
 }
 
-export default dashboard
+export default Dashboard
 
 export const BarChart = ({ chartData }) => {
     return (
