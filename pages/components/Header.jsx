@@ -2,8 +2,8 @@ import { AdjustmentsIcon, BellIcon, ChipIcon, CogIcon, InformationCircleIcon, Sh
 import Link from 'next/link'
 const Header = () => {
     return (
-        <header className="h-16 flex w-full justify-between bg-blue-500 px-2 p-2 fixed z-50 shadow-lg">
-            <div className="h-full w-96  flex items-center space-x-1 bg-white text-blue-500 p-2 rounded-2xl">
+        <header className="h-16 flex w-full justify-between bg-red-500 px-2 p-2 fixed z-50 shadow-lg">
+            <div className="h-full w-96  flex items-center space-x-1 bg-white text-red-500 p-2 rounded-2xl">
                 <UserCircleIcon className="h-8 w-8"/>
                 <p className="font-bold">Nicholas Squidward</p>
             </div>

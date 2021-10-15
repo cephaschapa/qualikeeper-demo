@@ -7,140 +7,140 @@ const activity = () => {
         {
             "id": 1,
             "tagID": "47005AHKJB7HkKJ8",
-            "hasTaken": "Yes",
-            "intake": "Nominal",
+            "hasTaken": "4",
+    
             "lasttimetaken": "20/07/2021 10:20"
         },
         {
             "id": 1,
             "tagID": "47005AHKJB7Hk890",
-            "hasTaken": "Yes",
+            "hasTaken": "3",
             "intake": "Nominal",
             "lasttimetaken": "20/07/2021 09:20"
         },
         {
             "id": 1,
             "tagID": "47005AHKJB7HkKJ1",
-            "hasTaken": "Yes",
+            "hasTaken": "4",
             "intake": "Nominal",
             "lasttimetaken": "20/07/2021 10:20"
         },
         {
             "id": 1,
             "tagID": "47005AHKJB7HkKJ8",
-            "hasTaken": "No",
+            "hasTaken": "4",
             "intake": "Nominal",
             "lasttimetaken": "20/07/2021 10:20"
         },
         {
             "id": 1,
             "tagID": "47005AHKJB7HkKJ8",
-            "hasTaken": "No",
+            "hasTaken": "4",
             "intake": "Nominal",
             "lasttimetaken": "20/07/2021 10:20"
         },
         {
             "id": 1,
             "tagID": "47005AHKJB7HkKJ8",
-            "hasTaken": "Yes",
+            "hasTaken": "2",
             "intake": "Nominal",
             "lasttimetaken": "20/07/2021 10:20"
         },
         {
             "id": 1,
             "tagID": "47005AHKJB7Hk890",
-            "hasTaken": "Yes",
+            "hasTaken": "3",
             "intake": "Nominal",
             "lasttimetaken": "20/07/2021 09:20"
         },
         {
             "id": 1,
             "tagID": "47005AHKJB7HkKJ1",
-            "hasTaken": "Yes",
+            "hasTaken": "4",
             "intake": "Nominal",
             "lasttimetaken": "20/07/2021 10:20"
         },
         {
             "id": 1,
             "tagID": "47005AHKJB7HkKJ8",
-            "hasTaken": "No",
+            "hasTaken": "4",
             "intake": "Nominal",
             "lasttimetaken": "20/07/2021 10:20"
         },
         {
             "id": 1,
             "tagID": "47005AHKJB7HkKJ8",
-            "hasTaken": "No",
+            "hasTaken": "4",
             "intake": "Nominal",
             "lasttimetaken": "20/07/2021 10:20"
         },
         {
             "id": 1,
             "tagID": "47005AHKJB7HkKJ8",
-            "hasTaken": "Yes",
+            "hasTaken": "6",
             "intake": "Nominal",
             "lasttimetaken": "20/07/2021 10:20"
         },
         {
             "id": 1,
             "tagID": "47005AHKJB7Hk890",
-            "hasTaken": "Yes",
+            "hasTaken": "3",
             "intake": "Nominal",
             "lasttimetaken": "20/07/2021 09:20"
         },
         {
             "id": 1,
             "tagID": "47005AHKJB7HkKJ1",
-            "hasTaken": "Yes",
+            "hasTaken": "1",
             "intake": "Nominal",
             "lasttimetaken": "20/07/2021 10:20"
         },
         {
             "id": 1,
             "tagID": "47005AHKJB7HkKJ8",
-            "hasTaken": "No",
+            "hasTaken": "4",
             "intake": "Nominal",
             "lasttimetaken": "20/07/2021 10:20"
         },
         {
             "id": 1,
             "tagID": "47005AHKJB7HkKJ8",
-            "hasTaken": "No",
+            "hasTaken": "4",
             "intake": "Nominal",
             "lasttimetaken": "20/07/2021 10:20"
         },
         {
             "id": 1,
             "tagID": "47005AHKJB7HkKJ8",
-            "hasTaken": "Yes",
+            "hasTaken": "4",
             "intake": "Nominal",
             "lasttimetaken": "20/07/2021 10:20"
         },
         {
             "id": 1,
             "tagID": "47005AHKJB7Hk890",
-            "hasTaken": "Yes",
+            "hasTaken": "4",
             "intake": "Nominal",
             "lasttimetaken": "20/07/2021 09:20"
         },
         {
             "id": 1,
             "tagID": "47005AHKJB7HkKJ1",
-            "hasTaken": "Yes",
+            "hasTaken": "4",
             "intake": "Nominal",
             "lasttimetaken": "20/07/2021 10:20"
         },
         {
             "id": 1,
             "tagID": "47005AHKJB7HkKJ8",
-            "hasTaken": "No",
+            "hasTaken": "4",
             "intake": "Nominal",
             "lasttimetaken": "20/07/2021 10:20"
         },
         {
             "id": 1,
             "tagID": "47005AHKJB7HkKJ8",
-            "hasTaken": "No",
+            "hasTaken": "4",
             "intake": "Nominal",
             "lasttimetaken": "20/07/2021 10:20"
         },
@@ -163,11 +163,9 @@ const activity = () => {
                                     Tag ID
                                 </th>
                                 <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    Has Taken
+                                    # of times at trough
                                 </th>
-                                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    Intake
-                                </th>
+                               
                                 <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                     Last Time Taken
                                 </th>
@@ -193,9 +191,7 @@ const activity = () => {
                                                 <td className="px-6 py-4 whitespace-nowrap">
                                                     {data.hasTaken}
                                                 </td>
-                                                <td className="px-6 py-4 whitespace-nowrap">
-                                                {data.intake}
-                                                </td>
+                                                
                                                 <td className="px-6 py-4 whitespace-nowrap">
                                                     {data.lasttimetaken}
                                                 </td>

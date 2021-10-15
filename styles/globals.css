@@ -11,3 +11,6 @@ main {
   background: url('/qk.jpg')no-repeat center;
   background-size: cover;
 }
+.btn{
+  background: #F5322D;
+}
