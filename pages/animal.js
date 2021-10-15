@@ -106,20 +106,20 @@ const Animal = () => {
 
     useEffect(() => {
         const fetchPrices = async () => {
-        //   const res = await fetch("https://api.coincap.io/v2/assets/?limit=5")
+        //   const res = await fetch('https://api.coincap.io/v2/assets/?limit=5')
         //   const data = await res.json()
           setChartData({
             labels: data.map((d) => d.day),
             datasets: [
               {
-                label: "Temperature in Celsius",
+                label: 'Temperature in Celsius',
                 data: data.map((v) => v.temp),
                 backgroundColor: [
-                  "#ffbb11",
-                  "#ecf0f1",
-                  "#50AF95",
-                  "#f3ba2f",
-                  "#2a71d0"
+                  '#ffbb11',
+                  '#ecf0f1',
+                  '#50AF95',
+                  '#f3ba2f',
+                  '#2a71d0'
                 ]
               }
             ]
@@ -128,14 +128,14 @@ const Animal = () => {
             labels: data2.map((d) => d.day),
             datasets: [
               {
-                label: "Average Weight",
+                label: 'Average Weight',
                 data: data2.map((v) => v.temp),
                 backgroundColor: [
-                  "#ffbb11",
-                  "#ecf0f1",
-                  "#50AF95",
-                  "#f3ba2f",
-                  "#2a71d0"
+                  '#ffbb11',
+                  '#ecf0f1',
+                  '#50AF95',
+                  '#f3ba2f',
+                  '#2a71d0'
                 ]
               }
             ]
@@ -185,7 +185,7 @@ const Animal = () => {
                             <p>Milk Produced:</p>
                             <p>Health History:</p>
                             <p>Procedures Due:</p>
-                            <p>Number of "Births":</p>
+                            <p>Number of Births:</p>
                             
                         </div>
                         
