@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^1.0.4",
+    "@reach/portal": "^0.16.2",
     "autoprefixer": "^10.3.6",
     "chart.js": "^3.5.1",
     "next": "11.1.2",
@@ -17,6 +18,7 @@
     "react": "17.0.2",
     "react-chartjs-2": "^3.0.5",
     "react-dom": "17.0.2",
+    "react-icons": "^4.3.1",
     "tailwindcss": "^2.2.16"
   },
   "devDependencies": {

@@ -2,149 +2,10 @@ import { AdjustmentsIcon, BellIcon, CakeIcon, ChipIcon, CogIcon, InformationCirc
 import Header from './components/Header'
 import Sidebar from './components/Sidebar'
 import Link from 'next/link'
-const activity = () => {
-    const data = [
-        {
-            "id": 1,
-            "tagID": "47005AHKJB7HkKJ8",
-            "hasTaken": "4",
+const activity = ({record}) => {
+    let data = record.data
+    console.log(data)
     
-            "lasttimetaken": "20/07/2021 10:20"
-        },
-        {
-            "id": 1,
-            "tagID": "47005AHKJB7Hk890",
-            "hasTaken": "3",
-            "intake": "Nominal",
-            "lasttimetaken": "20/07/2021 09:20"
-        },
-        {
-            "id": 1,
-            "tagID": "47005AHKJB7HkKJ1",
-            "hasTaken": "4",
-            "intake": "Nominal",
-            "lasttimetaken": "20/07/2021 10:20"
-        },
-        {
-            "id": 1,
-            "tagID": "47005AHKJB7HkKJ8",
-            "hasTaken": "4",
-            "intake": "Nominal",
-            "lasttimetaken": "20/07/2021 10:20"
-        },
-        {
-            "id": 1,
-            "tagID": "47005AHKJB7HkKJ8",
-            "hasTaken": "4",
-            "intake": "Nominal",
-            "lasttimetaken": "20/07/2021 10:20"
-        },
-        {
-            "id": 1,
-            "tagID": "47005AHKJB7HkKJ8",
-            "hasTaken": "2",
-            "intake": "Nominal",
-            "lasttimetaken": "20/07/2021 10:20"
-        },
-        {
-            "id": 1,
-            "tagID": "47005AHKJB7Hk890",
-            "hasTaken": "3",
-            "intake": "Nominal",
-            "lasttimetaken": "20/07/2021 09:20"
-        },
-        {
-            "id": 1,
-            "tagID": "47005AHKJB7HkKJ1",
-            "hasTaken": "4",
-            "intake": "Nominal",
-            "lasttimetaken": "20/07/2021 10:20"
-        },
-        {
-            "id": 1,
-            "tagID": "47005AHKJB7HkKJ8",
-            "hasTaken": "4",
-            "intake": "Nominal",
-            "lasttimetaken": "20/07/2021 10:20"
-        },
-        {
-            "id": 1,
-            "tagID": "47005AHKJB7HkKJ8",
-            "hasTaken": "4",
-            "intake": "Nominal",
-            "lasttimetaken": "20/07/2021 10:20"
-        },
-        {
-            "id": 1,
-            "tagID": "47005AHKJB7HkKJ8",
-            "hasTaken": "6",
-            "intake": "Nominal",
-            "lasttimetaken": "20/07/2021 10:20"
-        },
-        {
-            "id": 1,
-            "tagID": "47005AHKJB7Hk890",
-            "hasTaken": "3",
-            "intake": "Nominal",
-            "lasttimetaken": "20/07/2021 09:20"
-        },
-        {
-            "id": 1,
-            "tagID": "47005AHKJB7HkKJ1",
-            "hasTaken": "1",
-            "intake": "Nominal",
-            "lasttimetaken": "20/07/2021 10:20"
-        },
-        {
-            "id": 1,
-            "tagID": "47005AHKJB7HkKJ8",
-            "hasTaken": "4",
-            "intake": "Nominal",
-            "lasttimetaken": "20/07/2021 10:20"
-        },
-        {
-            "id": 1,
-            "tagID": "47005AHKJB7HkKJ8",
-            "hasTaken": "4",
-            "intake": "Nominal",
-            "lasttimetaken": "20/07/2021 10:20"
-        },
-        {
-            "id": 1,
-            "tagID": "47005AHKJB7HkKJ8",
-            "hasTaken": "4",
-            "intake": "Nominal",
-            "lasttimetaken": "20/07/2021 10:20"
-        },
-        {
-            "id": 1,
-            "tagID": "47005AHKJB7Hk890",
-            "hasTaken": "4",
-            "intake": "Nominal",
-            "lasttimetaken": "20/07/2021 09:20"
-        },
-        {
-            "id": 1,
-            "tagID": "47005AHKJB7HkKJ1",
-            "hasTaken": "4",
-            "intake": "Nominal",
-            "lasttimetaken": "20/07/2021 10:20"
-        },
-        {
-            "id": 1,
-            "tagID": "47005AHKJB7HkKJ8",
-            "hasTaken": "4",
-            "intake": "Nominal",
-            "lasttimetaken": "20/07/2021 10:20"
-        },
-        {
-            "id": 1,
-            "tagID": "47005AHKJB7HkKJ8",
-            "hasTaken": "4",
-            "intake": "Nominal",
-            "lasttimetaken": "20/07/2021 10:20"
-        },
-    ]
     return (
         <div>
             <Header />
@@ -172,34 +33,26 @@ const activity = () => {
                             </tr>
                         </thead>
                         <tbody className="bg-white divide-y divide-gray-200">
-                            {
-                                data.map((data, i)=>{
-                                    return(
-                                        <Link href="/animal" key={i}>
-                                             <tr >
-                                                <td className="px-6 py-4 whitespace-nowrap">
-                                                    <div className="flex items-center">
-                                                    
-                                                    <div className="ml-4">
-                                                        <div className="text-sm font-medium text-gray-900">
-                                                        {data.tagID}
-                                                        </div>
-                                                        
-                                                    </div>
-                                                    </div>
-                                                </td>
-                                                <td className="px-6 py-4 whitespace-nowrap">
-                                                    {data.hasTaken}
-                                                </td>
-                                                
-                                                <td className="px-6 py-4 whitespace-nowrap">
-                                                    {data.lasttimetaken}
-                                                </td>
-                                            </tr>
-                                        </Link>
-                                    )
-                                })
-                            }
+                            <tr >
+                                <td className="px-6 py-4 whitespace-nowrap">
+                                    <div className="flex items-center">
+                                    
+                                    <div className="ml-4">
+                                        <div className="text-sm font-medium text-gray-900">
+                                        {data.cardId}
+                                        </div>
+                                        
+                                    </div>
+                                    </div>
+                                </td>
+                                <td className="px-6 py-4 whitespace-nowrap">
+                                    {data.waterTrough}
+                                </td>
+                                
+                                <td className="px-6 py-4 whitespace-nowrap">
+                                    {data.occuredAt}
+                                </td>
+                            </tr>
                         </tbody>
                         </table>
                         </div>
@@ -213,3 +66,15 @@ const activity = () => {
 }
 
 export default activity
+
+export async function getServerSideProps(){
+    const data = await fetch('http://192.168.10.3:5500/get-record/6215658ef4b9dbd03b1e8596',{
+        method: "GET"
+    })
+    const record = await data.json()
+    return{
+        props: {
+            record
+        }
+    }
+}

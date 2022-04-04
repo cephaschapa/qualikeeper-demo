@@ -14,15 +14,19 @@ export default function Home() {
 
       <main className="">
         <div className="flex space-y-2 flex-col items-center justify-center h-screen p-2">
-          <p className="text-2xl mb-10 font-bold text-white">Qualikeeper Farm Companion</p>
-          <div className="h-auto flex flex-col items-center bg-white space-y-3 w-full shadow-lg rounded-2xl p-4 border border-gray-300">
-            <Image src="/logo.png" alt="" height={100} width={120}/>
-            <p className="text-center uppercase tex-gray-600">Login In</p>
-            <input type="text" placeholder="Email" className="border border-gray-300 w-full p-3 rounded-2xl"/>
-            <input type="password" placeholder="Password" className="border border-gray-300 w-full p-3 rounded-2xl"/>
+          <p className="text-3xl font-bold text-gray-600">Stoke Keeper Logo</p>
+          <p className="text-xl mb-10 text-gray-600 font-bold">Stock Keeper Tagline</p>
+          <div className="h-auto flex flex-col items-center bg-white space-y-3 w-full p-4">
+            {/* <p className="text-center uppercase tex-gray-600">Login</p> */}
+            <input type="text" placeholder="Email" className="border-b-4 bg-gray-100 border-gray-300 w-full p-3"/>
+            <input type="password" placeholder="Password" className="border-b-4 bg-gray-100 border-gray-300 w-full p-3"/>
             <Link href="/dashboard">
-              <button className="w-full p-3 bg-red-600 btn text-white rounded-2xl">LOGIN</button>
+              <button className="w-full p-3 bg-red-600 btn text-white">LOGIN</button>
             </Link>
+          </div>
+          <div className='flex flex-col relative top-20 justify-center items-center'>
+            {/* <p className='text-gray-600 text-xl'>Powered By</p> */}
+            <Image src="/logo.png" alt="" height={100} width={120}/>
           </div>
         </div>
       </main>
