@@ -2,13 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
-html, body {
-  font-family: 'Abel', sans-serif;
-} */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
-main {
-  /* background: url('/qk.jpg')no-repeat center; */
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+main, .main {
+  background: url('/livestock (1).jpg')no-repeat center;
   background-size: cover;
 }
 .btn{
