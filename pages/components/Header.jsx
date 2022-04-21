@@ -1,5 +1,6 @@
 import React from 'react'
-import { MenuIcon,  } from '@heroicons/react/outline'
+import { MenuIcon,  } from '@heroicons/react/outline';
+import {VscDeviceCameraVideo, VscBellDot, VscSettings} from 'react-icons/vsc';
 import {VideoCameraIcon, AdjustmentsIcon, BellIcon, ChipIcon, CogIcon, InformationCircleIcon, ShieldCheckIcon, UserCircleIcon, ViewGridAddIcon, ViewGridIcon, ViewListIcon } from '@heroicons/react/solid'
 import Link from 'next/link'
 import Portal from '@reach/portal';
@@ -13,7 +14,7 @@ const Header = () => {
 
   return (
       <header className="h-16 flex w-full justify-between bg-red-500 px-2 p-2 fixed z-50 shadow-lg">
-          <div className="h-full  flex items-center space-x-1 bg-white text-red-500 p-2 rounded-2xl">
+          <div className="h-full  flex items-center space-x-1 text-white p-2 rounded-xl border border-white">
               <button 
                   type="button"
                   onClick={toggle}
@@ -22,20 +23,29 @@ const Header = () => {
               </button>
           </div>
           <div className="h-full flex items-center justify-end space-x-3 w-full">
-              <VideoCameraIcon className="h-8 w-8 text-white"/>
-              <BellIcon className="h-8 w-8 text-white"/>
-              <CogIcon className="h-8 w-8 text-white"/>
+              <VscDeviceCameraVideo className="h-8 w-8 text-white"/>
+              <VscBellDot className="h-8 w-8 text-white"/>
+              <VscSettings className="h-8 w-8 text-white"/>
           </div>
           <Drawer isOpen={isOpen} toggle={toggle} position="left">
             <DrawerHeader>Drawer title</DrawerHeader>
             <DrawerBody>
-              <ul className='flex flex-col w-full space-y-3 text-xl'>
-                <li className='py-2 border-b'>Home</li>
-                <li className='py-2 border-b'>Manage</li>
-                <li className='py-2 border-b'>Activity</li>
-                {/* <li className='py-2 border-b'>Survellance</li> */}
-                <li className='py-2 border-b'>Settings</li>
-                <li className='py-2 border-b'>Account</li>
+              <ul className='flex flex-col w-full space-y-3 text-xl font-bold'>
+                <Link href="/dashboard">
+                  <li className='py-2 border-b'>Home</li>
+                </Link>
+                <Link href="/manage">
+                  <li className='py-2 border-b'>Manage</li>
+                </Link>
+                <Link href="/activity">
+                  <li className='py-2 border-b'>Activity</li>
+                </Link>
+                <Link href="/settings">
+                  <li className='py-2 border-b'>Settings</li>
+                </Link>
+                <Link href="/account">
+                  <li className='py-2 border-b'>Account</li>
+                </Link>
               </ul>
             </DrawerBody>
             <DrawerFooter>

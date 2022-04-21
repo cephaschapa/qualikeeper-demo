@@ -1,9 +1,11 @@
+import React, { useEffect, useState } from "react";
+import Link from 'next/link'
 import { AdjustmentsIcon, BellIcon, ChipIcon, CogIcon, InformationCircleIcon, ShieldCheckIcon, UserCircleIcon, ViewGridAddIcon, ViewGridIcon, ViewListIcon } from '@heroicons/react/solid'
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
-import React, { useEffect, useState } from "react";
 import { Line, Bar } from "react-chartjs-2";
-import {MenuIcon} from '@heroicons/react/outline'
+import {MenuIcon, TrendingUpIcon, TrendingDownIcon} from '@heroicons/react/outline'
+import {} from 'react-icons/vsc'
 import Portal from '@reach/portal';
 
 const Dashboard = () => {
@@ -55,14 +57,16 @@ const Dashboard = () => {
                                   <div className='flex h-24 w-full p-2 items-center justify-center bg-gray-800 text-center'>Food Intake</div> */}
                                 </div>
                             </div>
-                            <div onClick={toggle2} className="flex flex-col space-y-1 items-center justify-center p-3 text-white gap-3 h-32 w-full bg-white opacity-75">
-                              <p className='text-center text-black text-3xl'>Events</p>
-                                <div className='grid grid-cols-3 gap-2'>
-                                  {/* <div className='flex h-24 w-full p-2 items-center justify-center bg-gray-800 text-center'>Water Intake</div>
-                                  <div className='flex h-24 w-full p-2 items-center justify-center bg-gray-800 text-center'>Temperature</div>
-                                  <div className='flex h-24 w-full p-2 items-center justify-center bg-gray-800 text-center'>Food Intake</div> */}
-                                </div>
-                            </div>
+                            <Link href='/events'>
+                              <div  className="flex flex-col space-y-1 items-center justify-center p-3 text-white gap-3 h-32 w-full bg-white opacity-75">
+                                <p className='text-center text-black text-3xl'>Events</p>
+                                  <div className='grid grid-cols-3 gap-2'>
+                                    {/* <div className='flex h-24 w-full p-2 items-center justify-center bg-gray-800 text-center'>Water Intake</div>
+                                    <div className='flex h-24 w-full p-2 items-center justify-center bg-gray-800 text-center'>Temperature</div>
+                                    <div className='flex h-24 w-full p-2 items-center justify-center bg-gray-800 text-center'>Food Intake</div> */}
+                                  </div>
+                              </div>
+                            </Link>
                             {/* <p>Temperature Readings</p>
                             <BarChart chartData={chartData} />
                             <p>Average weight Readings</p>
@@ -83,7 +87,7 @@ const Dashboard = () => {
               <ModalFooter>
               <div className='w-full flex justify-center'>
                   <button
-                    onClick={toggle2}
+                    onClick={toggle}
                     className="text-white w-1/2 focus:outline-none m-1.5 rounded px-6 py-2 font-medium bg-gray-500"
                   >
                     Close
@@ -95,24 +99,54 @@ const Dashboard = () => {
               <ModalHeader><p className='text-center'>Health</p></ModalHeader>
                 <ModalBody>
                     <div className='flex flex-col p-3 space-y-3'>
-                      <div className='p-3 py-10 text-center bg-gray-100'>
-                        <p className='font-bold'>Water Intake</p>
-                        <i>No data available</i>
+                      <p className='font-bold'>Water Intake</p>
+                      <div className='flex bg-gray-200 rounded-lg'>
+                        <div className='flex flex-col w-3/4 p-3'>
+                          <span className='text-3xl font-bold'>
+                            345
+                          </span>
+                          <span>
+                            litres
+                          </span> 
+                        </div>
+                        <div className='w-1/4 flex items-center justify-center text-white bg-green-600 h-auto rounded-lg rounded-l-none'>
+                          <TrendingUpIcon className='h-8 w-8'/>
+                        </div>
                       </div>
-                      <div className='p-3 py-10 text-center bg-gray-100'>
-                        <p className='font-bold'>Temperature</p>
-                        <i>No data available</i>
+                      <p className='font-bold'>Temperature</p>
+                      <div className='flex bg-gray-200 rounded-lg'>
+                        <div className='flex flex-col w-3/4 p-3'>
+                          <span className='text-3xl font-bold'>
+                            39
+                          </span>
+                          <span>
+                            Degrees Celcius
+                          </span> 
+                        </div>
+                        <div className='w-1/4 flex items-center justify-center text-white bg-green-600 h-auto rounded-lg rounded-l-none'>
+                          <TrendingUpIcon className='h-8 w-8'/>
+                        </div>
                       </div>
-                      <div className='p-3 py-10 text-center bg-gray-100'>
-                        <p className='font-bold'>Food Intake</p>
-                        <i>No data available</i>
+                      <p className='font-bold'>Food Intake</p>
+                      <div className='flex bg-gray-200 rounded-lg'>
+                        <div className='flex flex-col w-3/4 p-3'>
+                          <span className='text-3xl font-bold'>
+                            50
+                          </span>
+                          <span>
+                            Kilograms
+                          </span> 
+                        </div>
+                        <div className='w-1/4 flex items-center justify-center text-white bg-red-600 h-auto rounded-lg rounded-l-none'>
+                          <TrendingDownIcon className='h-8 w-8'/>
+                        </div>
                       </div>
                     </div>
                 </ModalBody>
               <ModalFooter>
               <div className='w-full flex justify-center'>
                   <button
-                    onClick={toggle2}
+                    onClick={toggle1}
                     className="text-white w-1/2 focus:outline-none m-1.5 rounded px-6 py-2 font-medium bg-gray-500"
                   >
                     Close
@@ -192,7 +226,7 @@ const style = {
   header: `items-start justify-between p-4 border-b border-gray-300`,
   container: `fixed top-0 overflow-y-auto left-0 z-40 w-full h-full mt-20`,
   overlay: `fixed top-0 left-0 z-30 w-screen h-screen bg-black opacity-50`,
-  content: `animate-modal relative flex flex-col bg-white pointer-events-auto`,
+  content: `animate-modal relative flex flex-col bg-white opacity-90 pointer-events-auto`,
   footer: `flex flex-wrap items-center justify-end p-3 border-t border-gray-300`,
   orientation: `mt-12 mx-8 pb-6 md:m-auto md:w-6/12 lg:w-4/12 md:pt-12 focus:outline-none`,
 };
