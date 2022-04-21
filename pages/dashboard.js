@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Link from 'next/link'
-import { AdjustmentsIcon, BellIcon, ChipIcon, CogIcon, InformationCircleIcon, ShieldCheckIcon, UserCircleIcon, ViewGridAddIcon, ViewGridIcon, ViewListIcon } from '@heroicons/react/solid'
+import { AdjustmentsIcon, BellIcon, ChipIcon, CogIcon, InformationCircleIcon, ShieldCheckIcon, UserCircleIcon, ViewGridAddIcon, ViewGridIcon, ViewListIcon, XIcon } from '@heroicons/react/solid'
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import { Line, Bar } from "react-chartjs-2";
@@ -76,7 +76,21 @@ const Dashboard = () => {
                 </div>
             </section>
             <Modal isOpen={isOpen} toggle={toggle}>
-              <ModalHeader><div className='text-center'>Animals</div></ModalHeader>
+              <ModalHeader>
+                <div className="w-full flex justify-end">
+                  <button
+                    onClick={toggle}
+                    className="focus:outline-none relative  border-gray-600 p-1 rounded-full font-medium text-gray-700"
+                  >
+                    <XIcon className="h-6 w-6 text-gray-400"/>
+                  </button>
+                </div>
+                <div className='flex justify-center items-center'>
+                  <p className="relative -top-3">
+                    Animals
+                  </p>
+                </div>
+              </ModalHeader>
                 <ModalBody>
                    <div className='space-y-3 text-lg text-center'>
                      <p>Group 1: 100</p>
@@ -86,17 +100,26 @@ const Dashboard = () => {
                 </ModalBody>
               <ModalFooter>
               <div className='w-full flex justify-center'>
-                  <button
-                    onClick={toggle}
-                    className="text-white w-1/2 focus:outline-none m-1.5 rounded px-6 py-2 font-medium bg-gray-500"
-                  >
-                    Close
-                  </button>
+                  
                 </div>
               </ModalFooter>
             </Modal>
             <Modal1 isOpen1={isOpen1} toggle1={toggle1}>
-              <ModalHeader><p className='text-center'>Health</p></ModalHeader>
+              <ModalHeader>
+              <div className="w-full flex justify-end">
+                  <button
+                    onClick={toggle2}
+                    className="focus:outline-none relative  border-gray-600 p-1 rounded-full font-medium text-gray-700"
+                  >
+                    <XIcon className="h-6 w-6 text-gray-400"/>
+                  </button>
+                </div>
+                <div className='flex justify-center items-center'>
+                  <p className="relative -top-3">
+                    Health
+                  </p>
+                </div>
+              </ModalHeader>
                 <ModalBody>
                     <div className='flex flex-col p-3 space-y-3'>
                       <p className='font-bold'>Water Intake</p>
@@ -143,16 +166,7 @@ const Dashboard = () => {
                       </div>
                     </div>
                 </ModalBody>
-              <ModalFooter>
-              <div className='w-full flex justify-center'>
-                  <button
-                    onClick={toggle1}
-                    className="text-white w-1/2 focus:outline-none m-1.5 rounded px-6 py-2 font-medium bg-gray-500"
-                  >
-                    Close
-                  </button>
-                </div>
-              </ModalFooter>
+              
             </Modal1>
             <Modal isOpen={isOpen2} toggle={toggle2}>
               <ModalHeader><div className='text-center'>Activity</div></ModalHeader>
@@ -221,9 +235,9 @@ export const BarChart = ({ chartData }) => {
 
   
 const style = {
-  body: `flex-shrink flex-grow p-4`,
+  body: `p-2`,
   headerTitle: `text-2xl md:text-3xl font-light`,
-  header: `items-start justify-between p-4 border-b border-gray-300`,
+  header: `items-start justify-between p-1 border-b border-gray-300`,
   container: `fixed top-0 overflow-y-auto left-0 z-40 w-full h-full mt-20`,
   overlay: `fixed top-0 left-0 z-30 w-screen h-screen bg-black opacity-50`,
   content: `animate-modal relative flex flex-col bg-white opacity-90 pointer-events-auto`,

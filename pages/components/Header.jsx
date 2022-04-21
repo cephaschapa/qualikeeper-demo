@@ -1,7 +1,7 @@
 import React from 'react'
-import { MenuIcon,  } from '@heroicons/react/outline';
+import { MenuIcon, CogIcon } from '@heroicons/react/outline';
 import {VscDeviceCameraVideo, VscBellDot, VscSettings} from 'react-icons/vsc';
-import {VideoCameraIcon, AdjustmentsIcon, BellIcon, ChipIcon, CogIcon, InformationCircleIcon, ShieldCheckIcon, UserCircleIcon, ViewGridAddIcon, ViewGridIcon, ViewListIcon } from '@heroicons/react/solid'
+import {VideoCameraIcon, AdjustmentsIcon, BellIcon, ChipIcon, InformationCircleIcon, ShieldCheckIcon, UserCircleIcon, ViewGridAddIcon, ViewGridIcon, ViewListIcon } from '@heroicons/react/solid'
 import Link from 'next/link'
 import Portal from '@reach/portal';
 
@@ -25,7 +25,6 @@ const Header = () => {
           <div className="h-full flex items-center justify-end space-x-3 w-full">
               <VscDeviceCameraVideo className="h-8 w-8 text-white"/>
               <VscBellDot className="h-8 w-8 text-white"/>
-              <VscSettings className="h-8 w-8 text-white"/>
           </div>
           <Drawer isOpen={isOpen} toggle={toggle} position="left">
             <DrawerHeader>Drawer title</DrawerHeader>
