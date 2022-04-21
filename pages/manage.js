@@ -4,7 +4,7 @@ import { AdjustmentsIcon, BellIcon, CakeIcon, ChipIcon, CogIcon, InformationCirc
 import Header from './components/Header'
 import Sidebar from './components/Sidebar'
 import Link from 'next/link'
-const all = () => {
+const All = () => {
     const [isOpen, setIsOpen] = React.useState(false);
     const [isOpen1, setIsOpen1] = React.useState(false);
     const [isOpen2, setIsOpen2] = React.useState(false);
@@ -223,7 +223,7 @@ const all = () => {
     )
 }
 
-export default all
+export default All;
 
 /*Logic*/
 
